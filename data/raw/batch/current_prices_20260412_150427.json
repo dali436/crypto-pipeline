@@ -1,0 +1,31 @@
+{
+  "ingested_at": "2026-04-12T15:04:27.282708",
+  "source": "coingecko",
+  "type": "current_prices",
+  "data": {
+    "binancecoin": {
+      "usd": 590.53,
+      "usd_market_cap": 80493642744.11877,
+      "usd_24h_vol": 1031743740.3798416,
+      "usd_24h_change": -2.3643437658725617
+    },
+    "bitcoin": {
+      "usd": 70800,
+      "usd_market_cap": 1416571445782.4573,
+      "usd_24h_vol": 30350803895.87669,
+      "usd_24h_change": -2.624652295213382
+    },
+    "ethereum": {
+      "usd": 2182.67,
+      "usd_market_cap": 263364066600.979,
+      "usd_24h_vol": 16112488538.089264,
+      "usd_24h_change": -2.665898820860104
+    },
+    "solana": {
+      "usd": 81.6,
+      "usd_market_cap": 46875849475.29973,
+      "usd_24h_vol": 3053015378.755558,
+      "usd_24h_change": -3.2503726048946406
+    }
+  }
+}
