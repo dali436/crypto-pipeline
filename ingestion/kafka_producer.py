@@ -5,7 +5,7 @@ Publie dans un topic Kafka toutes les 5 secondes
 
 Prérequis :
     pip install kafka-python requests
-    Kafka doit tourner localement (voir docker-compose.yml)
+    Kafka doit tourner localement
 """
 
 import json

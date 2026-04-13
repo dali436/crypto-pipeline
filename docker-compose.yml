@@ -1,8 +1,7 @@
 version: "3.9"
-
+ 
 services:
-
-  # ── Zookeeper (requis par Kafka) ──────────────────────────────
+ 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.5.0
     container_name: zookeeper
@@ -11,8 +10,7 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
     ports:
       - "2181:2181"
-
-  # ── Kafka Broker ──────────────────────────────────────────────
+ 
   kafka:
     image: confluentinc/cp-kafka:7.5.0
     container_name: kafka
@@ -26,8 +24,7 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
-
-  # ── Kafka UI (interface web pour visualiser les topics) ───────
+ 
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
     container_name: kafka-ui
@@ -38,3 +35,33 @@ services:
     environment:
       KAFKA_CLUSTERS_0_NAME: local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+ 
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+ 
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: crypto_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./storage/db_init.sql:/docker-entrypoint-initdb.d/init.sql
+ 
+volumes:
+  minio_data:
+  postgres_data:
