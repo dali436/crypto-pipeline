@@ -16,7 +16,7 @@ from tenacity import retry, stop_after_attempt, wait_fixed
 from sqlalchemy import create_engine, text
 
 # ── Configuration ──────────────────────────────────────────────
-DB_URL = "postgresql://postgres:postgres@localhost:5433/crypto_db"
+DB_URL = "postgresql://neondb_owner:npg_hwvnSaXg1CO9@ep-damp-dawn-amy2sbg1-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
 
 ANOMALY_THRESHOLD_PCT = 5.0      # alerte si variation > 5%
 AGGREGATION_PERIOD    = "1h"     # période d'agrégation
