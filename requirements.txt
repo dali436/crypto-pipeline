@@ -10,7 +10,7 @@ kafka-python==2.0.2
 
 # ── Étape 2 : Stockage ───────────────────────────────────────
 minio==7.2.3
-psycopg2-binary==2.9.9
+psycopg2-binary
 
 
 # ── Étape 3 : Transformation  ───────────────
