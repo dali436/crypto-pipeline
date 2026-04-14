@@ -1,38 +1,6 @@
-# ============================================================
-# Requirements - Crypto Pipeline Data Engineering
-# Installer avec : pip install -r requirements.txt
-# ============================================================
-
-
-# ── Étape 1 : Ingestion ─────────────────────────────────────
-requests==2.31.0
-kafka-python==2.0.2
-
-# ── Étape 2 : Stockage ───────────────────────────────────────
-minio==7.2.3
-psycopg2-binary
-
-
-# ── Étape 3 : Transformation  ───────────────
-pandas
-numpy==1.26.4
-sqlalchemy==2.0.25
-
-
-# ── Étape 4 : Orchestration  ────────────────
-schedule==1.2.2
-
-
-# ── Étape 5 : Visualisation  ────────────────
 streamlit==1.31.0
 plotly==5.18.0
-
-
-# ── Qualité du code  ─────
-pytest==7.4.4
-pytest-cov==4.1.0
-
-# ── Utilitaires généraux ─────────────────────────────────────
-python-dotenv==1.0.0
-loguru==0.7.2
+pandas==2.2.0
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
 tenacity==8.2.3
