@@ -25,7 +25,7 @@ st.set_page_config(
 )
 
 import os
-DB_URL = os.getenv("DB_URL", "postgresql://postgres:postgres@localhost:5433/crypto_db")
+DB_URL = os.getenv("DB_URL", "postgresql+pg8000://postgres:postgres@localhost:5433/crypto_db")
 
 CRYPTO_COLORS = {
     "bitcoin":     "#F7931A",
