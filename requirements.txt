@@ -1,6 +1,5 @@
-streamlit==1.31.0
-plotly==5.18.0
-pandas==2.2.0
-sqlalchemy==2.0.25
-psycopg2-binary==2.9.9
-tenacity==8.2.3
+streamlit
+plotly
+pandas
+sqlalchemy
+psycopg2-binary
