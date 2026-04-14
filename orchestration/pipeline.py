@@ -33,7 +33,7 @@ from transformation.transform import (
 # ── Configuration ──────────────────────────────────────────────
 CRYPTOS  = ["bitcoin", "ethereum", "solana", "binancecoin"]
 BASE_URL = "https://api.coingecko.com/api/v3"
-DB_URL   = "postgresql://postgres:postgres@localhost:5433/crypto_db"
+DB_URL   = "postgresql://neondb_owner:npg_hwvnSaXg1CO9@ep-damp-dawn-amy2sbg1-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
 
 
 # ══════════════════════════════════════════════════════════════
