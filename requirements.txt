@@ -14,7 +14,7 @@ psycopg2-binary
 
 
 # ── Étape 3 : Transformation  ───────────────
-pandas==2.2.0
+pandas
 numpy==1.26.4
 sqlalchemy==2.0.25
 
